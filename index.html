@@ -28,6 +28,27 @@
         [32, 35, 37, 39],
         [1000, 1001, 857, 1],
       ])
+
+      function bouncer(arr) {
+        const result = []
+
+        for (let i = 0; i < arr.length; i++) {
+          let trueNumber = arr[i]
+          if (arr[i] == false) {
+            arr.splice(i, 1)
+          }
+          if (isNaN(arr[i])) {
+            arr.splice(i, 1)
+          } else {
+            trueNumber = arr[i]
+          }
+          result[i] = trueNumber
+        }
+        console.log(result)
+        return result
+      }
+
+      bouncer([7, "ate", "", false, 9])
     </script>
   </body>
 </html>
